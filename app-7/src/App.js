@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import NewTask from './NewTask'
 import List from './List'
-import { render } from '@testing-library/react';
 
 class App extends Component{
   constructor(){
@@ -14,9 +13,7 @@ class App extends Component{
   }
 
   arrayAdd(task){
-    this.setState({
-        list: [...this.state.list, task]
-    })
+    this.setState({list: [...this.state.list, task]})
   }
 
   render(){

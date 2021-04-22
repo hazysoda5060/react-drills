@@ -1,4 +1,3 @@
-import { render } from 'react'
 import React, {Component} from 'react'
 
 class NewTask extends Component{
@@ -7,7 +6,7 @@ class NewTask extends Component{
         this.state = {
             userInput: ''
         }
-        this.handleChange = this.handleChange.bind(this)
+        this.handleAdd = this.handleAdd.bind(this)
     }
 
     handleChange(value){
@@ -16,7 +15,7 @@ class NewTask extends Component{
 
     handleAdd(){
         this.props.add(this.state.userInput)
-        this.setState({input: ''})
+        this.setState({userInput: ''})
     }
 
     render(){
